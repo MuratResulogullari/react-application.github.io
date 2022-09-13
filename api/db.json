@@ -2539,24 +2539,6 @@
         "https://dummyjson.com/image/i/products/100/3.jpg",
         "https://dummyjson.com/image/i/products/100/thumbnail.jpg"
       ]
-    },
-    {
-      "title": "new",
-      "description": "newProduct",
-      "price": "100",
-      "discountPercentage": "12",
-      "rating": "44",
-      "stock": "22",
-      "brand": "newline",
-      "categoryId": 2,
-      "thumbnail": "https://dummyjson.com/image/i/products/100/thumbnail.jpg",
-      "images": [
-        "https://dummyjson.com/image/i/products/19/1.jpg",
-        "https://dummyjson.com/image/i/products/19/2.jpg",
-        "https://dummyjson.com/image/i/products/19/3.jpg",
-        "https://dummyjson.com/image/i/products/19/thumbnail.jpeg"
-      ],
-      "id": 101
     }
   ],
   "profile": {
