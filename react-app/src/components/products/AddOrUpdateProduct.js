@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { getCategories } from "../../redux/actions/categoryActions";
 import { saveProduct, getProducts } from "../../redux/actions/productActions";
 import CreateProduct from './CreateProduct';
-import { useParams } from 'react-router-dom';
+import alertify from "alertifyjs";
 function AddOrUpdateProduct({
     products,
     categories,
@@ -37,7 +37,7 @@ function AddOrUpdateProduct({
         setProduct(previousProduct => (
             {
                 ...previousProduct,
-                [name]: name === "CategoryId" ? parseInt(value, 10) : value
+                [name]: name === "categoryId" ? parseInt(value, 10) : value
             }));
         validation(name, value);
 
@@ -56,6 +56,8 @@ function AddOrUpdateProduct({
         saveProduct(product).then(() => {
             history.push("/")  // Go to this url
         });
+        alertify.notify(product.title + ' save database', 'success', 5, function () { console.log(product.title + ' save database'); });
+        //window.location.href = "products";
     }
     return (
         <CreateProduct product={product} categories={categories} onChange={handleChange} onSave={handleSave} errors={errors} />

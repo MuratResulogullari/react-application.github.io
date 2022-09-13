@@ -2541,26 +2541,22 @@
       ]
     },
     {
-      "selectCategoryId": "3",
-      "images": "C:\\fakepath\\1.jpeg",
       "title": "new",
-      "description": "ewee",
+      "description": "newProduct",
       "price": "100",
       "discountPercentage": "12",
-      "rating": "12",
-      "stock": "122",
-      "brand": "bra",
-      "thumbnail": "C:\\fakepath\\2.jpeg",
+      "rating": "44",
+      "stock": "22",
+      "brand": "newline",
+      "categoryId": 2,
+      "thumbnail": "https://dummyjson.com/image/i/products/100/thumbnail.jpg",
+      "images": [
+        "https://dummyjson.com/image/i/products/19/1.jpg",
+        "https://dummyjson.com/image/i/products/19/2.jpg",
+        "https://dummyjson.com/image/i/products/19/3.jpg",
+        "https://dummyjson.com/image/i/products/19/thumbnail.jpeg"
+      ],
       "id": 101
-    },
-    {
-      "title": "mura",
-      "id": 102
-    },
-    {
-      "title": "11",
-      "description": "",
-      "id": 103
     }
   ],
   "profile": {

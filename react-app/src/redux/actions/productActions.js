@@ -44,6 +44,7 @@ export function changePagePerCount(pagePerCount) {
 /** API  */
 
 export function saveProductApi(product) {
+
     return fetch('http://localhost:3000/products/' + (product.id || ""), {
         method: product.id ? "PUT" : "POST",
         headers: { "content-type": "application/json" },
@@ -52,6 +53,16 @@ export function saveProductApi(product) {
 }
 
 export function saveProduct(product) {
+    product.thumbnail = "https://github.com/MuratResulogullari/react-application.github.io/blob/main/react-app/src/img/products/" + product.thumbnail.split("\\")[2];
+    product.images = "https://github.com/MuratResulogullari/react-application.github.io/blob/main/react-app/src/img/products/" + product.images.split('\\')[2];
+    // product.thumbnail = "https://dummyjson.com/image/i/products/100/thumbnail.jpg";
+    // product.images = [
+    //     "https://dummyjson.com/image/i/products/100/1.jpg",
+    //     "https://dummyjson.com/image/i/products/100/2.jpg",
+    //     "https://dummyjson.com/image/i/products/100/3.jpg",
+    //     "https://dummyjson.com/image/i/products/100/thumbnail.jpeg"
+    // ];
+
     return function (dispatch) { // our action called in here
         return saveProductApi(product).then(result => {
             product.id

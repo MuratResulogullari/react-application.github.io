@@ -1,6 +1,6 @@
 import React from "react";
 
-const TextInput = ({ name, id, label, onChange, placeHolder, value, error }) => { // Hook
+const TextInput = ({ name, id, label, onChange, placeHolder, value, type, error }) => { // Hook
     let wrapperClass = "form-group";
     if (error && error.length > 0) {
         wrapperClass += "has-error";
@@ -15,7 +15,7 @@ const TextInput = ({ name, id, label, onChange, placeHolder, value, error }) => 
                     onChange={onChange}
                     value={value}
                     placeholder={placeHolder}
-                    type="text" className="form-control" />
+                    type={type} className="form-control" />
                 {error && <div className="alert alert-danger">{error}</div>}
             </div>
         </div>

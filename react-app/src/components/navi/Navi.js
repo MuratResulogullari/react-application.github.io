@@ -51,19 +51,19 @@ export default class Navi extends Component {
                                 <NavLink href="/products">Shop</NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink href="/contact">Contact</NavLink>
+                                <NavLink href="/saveproduct">New Product</NavLink>
                             </NavItem>
 
                         </Nav>
-                        <Link className='btn btn-light d-flex justify-content-center' to="/saveproduct">create</Link>
 
-                        <Form className='d-flex justify-content-center'>
+
+                        {/* <Form className='d-flex justify-content-center'>
 
                             <InputGroup className='mb-2  me-4 '>
                                 <Input className="bg-light border border-3 border-top-0 border-start-0 border-end-0 border-dark" type="search" placeholder="Search" aria-label="Search" />
                                 <Button color='muted' class="bg-light border-0" type="submit">Search</Button>
                             </InputGroup>
-                        </Form>
+                        </Form> */}
                         <CartSummery />
                     </Collapse>
                 </Navbar>
