@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import * as productActions from '../../redux/actions/productActions';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPen, faTrash } from '@fortawesome/free-solid-svg-icons';
-import { Alert, Table } from 'reactstrap';
+import { Alert, Container, Table } from 'reactstrap';
 import { Link } from 'react-router-dom';
 class ProductList extends Component {
     componentDidMount() {
@@ -24,7 +24,7 @@ class ProductList extends Component {
     }
     renderProductList() {
         return (
-            <>
+            <Container>
                 <h2>Product List</h2>
                 <hr />
                 <Link to="/saveproduct" className='btn btn-success'>New Product</Link>
@@ -64,7 +64,7 @@ class ProductList extends Component {
                         ))}
                     </tbody>
                 </Table>
-            </>
+            </Container>
         )
     }
     render() {

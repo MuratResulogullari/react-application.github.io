@@ -23,9 +23,6 @@ class Category extends Component {
                             onClick={() => this.selectCategory(category)}
                             active={category.categoryId === this.props.currentCategory.categoryId ? true : false}>
                             {category.categoryName}
-
-
-
                         </ListGroupItem>
                     ))}
                 </ListGroup>

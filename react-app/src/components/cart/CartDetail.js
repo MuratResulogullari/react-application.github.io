@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Alert, Table } from 'reactstrap';
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Alert, Table, Container, BreadcrumbItem, Breadcrumb } from 'reactstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartShopping, faTrash } from '@fortawesome/free-solid-svg-icons';
 import { connect } from 'react-redux';
@@ -15,36 +15,45 @@ class CartDetail extends Component {
     renderDetail() {
         return (
             <>
-                <h4>Cart Detail</h4>
-                <hr />
-                <Table>
-                    <thead>
-                        <tr>
-                            <th>Image</th>
-                            <th>Product</th>
-                            <th>Unit Price</th>
-                            <th>Quantity</th>
-                            <th>Price</th>
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tbody>
+                <div className='main-header breadcrumb'>
+                    <Breadcrumb listTag="div">
+                        <BreadcrumbItem href="/" tag="a">Home</BreadcrumbItem>
+                        <BreadcrumbItem active tag="span"> Create Product </BreadcrumbItem>
+                    </Breadcrumb>
+                </div>
 
-                        {this.props.cart.map(cartItem => (
+                <Container>
+                    <h4>Cart Detail</h4>
+                    <hr />
+                    <Table>
+                        <thead>
                             <tr>
-                                <td><img width={50} src={cartItem.product.thumbnail}></img></td>
-                                <td>{cartItem.product.title}</td>
-                                <td>{cartItem.product.price}</td>
-                                <td>{cartItem.quantity}</td>
-                                <td>{Math.floor(cartItem.product.price * cartItem.quantity).toFixed(2)}</td>
-                                <td><FontAwesomeIcon icon={faTrash} onClick={() => this.removeFromCart(cartItem.product)} /></td>
+                                <th>Image</th>
+                                <th>Product</th>
+                                <th>Unit Price</th>
+                                <th>Quantity</th>
+                                <th>Price</th>
+                                <th></th>
                             </tr>
+                        </thead>
+                        <tbody>
 
-                        ))}
+                            {this.props.cart.map(cartItem => (
+                                <tr>
+                                    <td><img width={50} src={cartItem.product.thumbnail}></img></td>
+                                    <td>{cartItem.product.title}</td>
+                                    <td>{cartItem.product.price}</td>
+                                    <td>{cartItem.quantity}</td>
+                                    <td>{Math.floor(cartItem.product.price * cartItem.quantity).toFixed(2)}</td>
+                                    <td><FontAwesomeIcon icon={faTrash} onClick={() => this.removeFromCart(cartItem.product)} /></td>
+                                </tr>
 
-                    </tbody>
+                            ))}
 
-                </Table>
+                        </tbody>
+
+                    </Table>
+                </Container>
             </>
         )
     }

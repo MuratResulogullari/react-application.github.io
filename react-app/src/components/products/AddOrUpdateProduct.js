@@ -52,14 +52,20 @@ function AddOrUpdateProduct({
         }
     }
     function handleSave(event) {
+
         event.preventDefault(); // for submit dont refresh page
         saveProduct(product).then(() => {
             history.push("/")  // Go to this url
         });
+
         alertify.notify(product.title + ' save database', 'success', 5, function () { console.log(product.title + ' save database'); });
-        //window.location.href = "products";
+        window.location.href = "products";
+
+
+
     }
     return (
+
         <CreateProduct product={product} categories={categories} onChange={handleChange} onSave={handleSave} errors={errors} />
     )
 

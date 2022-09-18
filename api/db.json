@@ -2539,24 +2539,6 @@
         "https://dummyjson.com/image/i/products/100/3.jpg",
         "https://dummyjson.com/image/i/products/100/thumbnail.jpg"
       ]
-    },
-    {
-      "title": "newProduct",
-      "description": "newProduct",
-      "price": "100",
-      "discountPercentage": "12",
-      "rating": "12",
-      "stock": "4",
-      "brand": "12",
-      "categoryId": 2,
-      "thumbnail": "https://github.com/MuratResulogullari/react-application.github.io/blob/main/react-app/src/img/products/thumbnail.jpg",
-      "images": [
-        "https://github.com/MuratResulogullari/react-application.github.io/blob/main/react-app/src/img/products/1.jpg",
-        "https://github.com/MuratResulogullari/react-application.github.io/blob/main/react-app/src/img/products/1.jpg",
-        "https://github.com/MuratResulogullari/react-application.github.io/blob/main/react-app/src/img/products/1.jpg",
-        "https://github.com/MuratResulogullari/react-application.github.io/blob/main/react-app/src/img/products/1.jpg"
-      ],
-      "id": 101
     }
   ],
   "profile": {

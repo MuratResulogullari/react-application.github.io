@@ -34,10 +34,14 @@ export default class Navi extends Component {
     render() {
         return (
 
-            <div className='mb-5 mx-0 d-flex bd-highlight' >
+            <>
 
-                <Navbar color='light' light expand="md" className='p-2 flex-fill bd-highlight '>
-                    <NavbarBrand href="/">Northwind</NavbarBrand>
+                <Navbar color='dark' expand="md" className='navbar p-2 flex-fill bd-highlight '>
+                    <NavbarBrand href="/">
+                        <h1 class="brand">
+                            <i class="fas fa-store"></i>
+                            <span> Valley </span> Store
+                        </h1></NavbarBrand>
                     <NavbarToggler onClick={this.toggle} />
                     <Collapse isOpen={this.state.isOpen} navbar>
                         <Nav navbar className='mx-auto '>
@@ -67,7 +71,8 @@ export default class Navi extends Component {
                         <CartSummery />
                     </Collapse>
                 </Navbar>
-            </div>
+
+            </>
 
         )
     }
