@@ -24,18 +24,41 @@ class Products extends Component {
         this.props.actions.addToCart({ product, quantity: quantity });
         alertify.notify(product.title + '  added to cart', 'success', 5, function () { console.log('dismissed'); });
     };
+    renderPagination() {
+        return (
+            <>
+                <Pagination className='pagination  justify-content-center mt-4'>
+                    <PaginationItem key="1" active={this.props.page === 1 ? true : false}>
+                        <PaginationLink onClick={() => this.selectPagination(1)}>
+                            1
+                        </PaginationLink>
+                    </PaginationItem >
+                    <PaginationItem key="1" active={this.props.page === 2 ? true : false}>
+                        <PaginationLink onClick={() => this.selectPagination(2)}>
+                            2
+                        </PaginationLink>
+                    </PaginationItem >
+                    <PaginationItem key="1" active={this.props.page === 3 ? true : false}>
+                        <PaginationLink onClick={() => this.selectPagination(3)}>
+                            3
+                        </PaginationLink>
+                    </PaginationItem >
+                </Pagination>
+            </>
+        )
+    }
     render() {
         return (
             <div>
                 <Row>
                     <Col >
-                        <Badge color='success'>Category : {this.props.currentCategory.categoryName}</Badge>
+                        <Badge color='primary'>Category : {this.props.currentCategory.categoryName}</Badge>
                     </Col>
                     <Col >
-                        <Badge color='success'>Page : {this.props.page}</Badge>
+                        <Badge color='primary'>Page : {this.props.page}</Badge>
                     </Col>
                     <Col >
-                        <Badge color='success'>Per Page : {this.props.pagePerCount}</Badge>
+                        <Badge color='primary'>Per Page : {this.props.pagePerCount}</Badge>
                     </Col>
                     <Col className='me-3 mt-0'>
                         <Input onChange={() => this.selectPerPage()}
@@ -88,25 +111,8 @@ class Products extends Component {
 
                     ))}
                 </Row>
-                <Pagination className='pagination  justify-content-center mt-4'>
+                {this.renderPagination()}
 
-                    <PaginationItem key="1" active={this.props.page === 1 ? true : false}>
-                        <PaginationLink onClick={() => this.selectPagination(1)}>
-                            1
-                        </PaginationLink>
-                    </PaginationItem >
-                    <PaginationItem key="2" active={this.props.page === 2 ? true : false}>
-                        <PaginationLink onClick={() => this.selectPagination(2)}>
-                            2
-                        </PaginationLink>
-                    </PaginationItem>
-                    <PaginationItem key="3" active={this.props.page === 3 ? true : false}>
-                        <PaginationLink onClick={() => this.selectPagination(3)}>
-                            3
-                        </PaginationLink>
-                    </PaginationItem>
-
-                </Pagination>
 
             </div >
         )

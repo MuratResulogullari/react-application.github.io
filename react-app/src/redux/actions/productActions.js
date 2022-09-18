@@ -53,6 +53,7 @@ export function saveProductApi(product) {
 }
 
 export function saveProduct(product) {
+    console.log(product);
     product.thumbnail = "https://dummyjson.com/image/i/products/36/" + product.thumbnail.split("\\")[2];
     product.images = [
         "https://dummyjson.com/image/i/products/36/" + product.images.split("\\")[2]

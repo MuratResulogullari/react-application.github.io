@@ -2539,6 +2539,21 @@
         "https://dummyjson.com/image/i/products/100/3.jpg",
         "https://dummyjson.com/image/i/products/100/thumbnail.jpg"
       ]
+    },
+    {
+      "title": "newProduct",
+      "description": "new kadın",
+      "price": "100",
+      "discountPercentage": "11",
+      "rating": "12",
+      "stock": "122",
+      "brand": "12",
+      "categoryId": 2,
+      "thumbnail": "https://dummyjson.com/image/i/products/36/thumbnail.jpg",
+      "images": [
+        "https://dummyjson.com/image/i/products/36/1.jpg"
+      ],
+      "id": 101
     }
   ],
   "profile": {

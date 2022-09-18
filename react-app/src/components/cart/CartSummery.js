@@ -45,7 +45,7 @@ class CartSummery extends Component {
             <>
                 <Button color="ligth" onClick={this.toggle} type="button" className='border-0'>
                     <FontAwesomeIcon icon={faCartShopping} />
-                    <span class=" translate-middle badge rounded-pill bg-success">
+                    <span color='white' class=" translate-middle badge rounded-pill bg-light">
                         {this.props.cart.length > 0 ? this.props.cart.length : ""}
                         <span class="visually-hidden">unread messages</span>
                     </span>

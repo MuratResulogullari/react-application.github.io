@@ -35,8 +35,7 @@ export default class Navi extends Component {
         return (
 
             <>
-
-                <Navbar color='dark' expand="md" className='navbar p-2 flex-fill bd-highlight '>
+                <Navbar expand="md" className='navbar bg-light p-2 flex-fill bd-highlight '>
                     <NavbarBrand href="/">
                         <h1 class="brand">
                             <i class="fas fa-store"></i>
